@@ -1,13 +1,12 @@
-PureMVC Port to AS2 by Pedr Browne
-PureMVC - Copyright(c) 2006, 2007 Futurescale, Inc., Some rights reserved.
+PureMVC Flex Demo - Application Skeleton 
+By Daniele Ugoletti <daniele.ugoletti@puremvc.org>
+Copyright(c) 2007 Daniele Ugoletti, Some rights reserved.
 --------------------------------------------------------------------------
 Release Date: ??/??/??
-    Platform: ActionScript 2  
+    Platform: ActionScript 3  
      Version: 0 
     Revision: 9
-      Author: Pedr Browne <pedr.browne@puremvc.org>
+      Author: Daniele Ugoletti <daniele.ugoletti@puremvc.org>
      License: Creative Commons Attribution 3.0 United States License
 --------------------------------------------------------------------------
-0.9 - Checked in currently working version. Unit tests haven't been 
-      converted yet, but it has had quite a bit of exercising and seems
-      to work fine. - CLH
+0.9 - Checked in initial folder structure and license - CLH
