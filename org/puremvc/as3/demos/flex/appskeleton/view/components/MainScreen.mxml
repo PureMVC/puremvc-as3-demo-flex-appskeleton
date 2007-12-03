@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ PureMVC AS3 Demo - Flex Application Skeleton 
+ Copyright (c) 2007 Daniele Ugoletti <daniele.ugoletti@puremvc.org>
+ Your reuse is governed by the Creative Commons Attribution 3.0 License
+-->
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns="*"
+	width="100%" height="100%"
+	creationComplete="dispatchEvent( new Event( CREATION_COMPLETE ) )">
+	<mx:Script>
+		<![CDATA[
+		import org.puremvc.as3.demos.flex.appskeleton.*;
+		
+		public static const CREATION_COMPLETE: String = "myCreationComplete";
+		]]>
+	</mx:Script>
+	<mx:VBox height="100%" width="100%" horizontalAlign="center" verticalAlign="middle">
+		<mx:Label text="{ApplicationFacade.getLocaleProxy().getText('How to read config values')}" color="#ffffff" fontSize="14" width="90%" />
+		<mx:Text id="configValueExample" width="90%" color="#ffffff" />
+		<mx:Label text="{ApplicationFacade.getLocaleProxy().getText('How to read locale text')}" color="#ffffff" fontSize="14" width="90%" />
+		<mx:Text id="localeValueExample" width="90%" color="#ffffff" />
+	</mx:VBox>
+</mx:Canvas>
