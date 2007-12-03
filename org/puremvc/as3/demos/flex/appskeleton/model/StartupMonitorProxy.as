@@ -9,7 +9,7 @@ package org.puremvc.as3.demos.flex.appskeleton.model
     import org.puremvc.patterns.proxy.Proxy;
 	
 	import org.puremvc.as3.demos.flex.appskeleton.*;
-	import org.puremvc.as3.demos.flex.appskeleton.VO.Resource;
+	import org.puremvc.as3.demos.flex.appskeleton.model.vo.ResourceVO;
 	
     /**
      * A proxy for the startup loading process
@@ -41,7 +41,7 @@ package org.puremvc.as3.demos.flex.appskeleton.model
          */
 		public function addResource( proxyName:String, blockChain:Boolean = false ):void
 		{
-			this.resourceList.push( new Resource( proxyName, blockChain ) );
+			this.resourceList.push( new ResourceVO( proxyName, blockChain ) );
 		}
 		
 		/**
@@ -51,7 +51,7 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 		{
 			for( var i:int = 0; i < this.resourceList.length; i++)
 			{
-				var r:Resource = this.resourceList[i] as Resource;
+				var r:ResourceVO = this.resourceList[i] as ResourceVO;
 				if ( !r.loaded )
 				{
 					var proxy:* = facade.retrieveProxy( r.proxyName ) as Proxy;
@@ -75,7 +75,7 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 		{
 			for( var i:int = 0; i < this.resourceList.length; i++)
 			{
-				var r:Resource = this.resourceList[i] as Resource;
+				var r:ResourceVO = this.resourceList[i] as ResourceVO;
 				if ( r.proxyName == proxyName )
 				{
 					r.loaded = true;
@@ -104,7 +104,7 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 		{
 			for( var i:int = 0; i < this.resourceList.length; i++)
 			{
-				var r:Resource = this.resourceList[i] as Resource;
+				var r:ResourceVO = this.resourceList[i] as ResourceVO;
 				if ( !r.loaded )
 				{
 					return false;
