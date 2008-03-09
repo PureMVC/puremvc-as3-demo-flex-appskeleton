@@ -5,8 +5,8 @@
 */
 package org.puremvc.as3.demos.flex.appskeleton.model
 {
-	import org.puremvc.interfaces.*;
-    import org.puremvc.patterns.proxy.Proxy;
+	import org.puremvc.as3.interfaces.*;
+    import org.puremvc.as3.patterns.proxy.Proxy;
 	
 	import org.puremvc.as3.demos.flex.appskeleton.*;
 	import org.puremvc.as3.demos.flex.appskeleton.model.vo.ResourceVO;

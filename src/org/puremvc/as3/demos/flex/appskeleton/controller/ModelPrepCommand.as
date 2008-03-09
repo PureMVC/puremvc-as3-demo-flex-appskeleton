@@ -6,9 +6,9 @@
 package org.puremvc.as3.demos.flex.appskeleton.controller
 {
 
-    import org.puremvc.interfaces.*;
-    import org.puremvc.patterns.command.*;
-    import org.puremvc.patterns.observer.*;
+    import org.puremvc.as3.interfaces.*;
+    import org.puremvc.as3.patterns.command.*;
+    import org.puremvc.as3.patterns.observer.*;
     
     import org.puremvc.as3.demos.flex.appskeleton.*;
     import org.puremvc.as3.demos.flex.appskeleton.model.*;

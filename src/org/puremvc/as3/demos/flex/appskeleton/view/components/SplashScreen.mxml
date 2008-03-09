@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
  PureMVC AS3 Demo - Flex Application Skeleton 
  Copyright (c) 2007 Daniele Ugoletti <daniele.ugoletti@puremvc.org>
@@ -16,10 +16,10 @@
 		]]>
 	</mx:Script>
 	<mx:VBox height="100%" width="100%" horizontalAlign="center" verticalAlign="middle" verticalGap="10">
-		<mx:Image source="@Embed('../../../../../../../../assets/splash.png')" />
+		<mx:Image source="@Embed('/assets/splash.png')" />
 		 <mx:ProgressBar id="pb" themeColor="#3E4B8B" label="" minimum="0" visible="true" maximum="100" direction="right" mode="manual" width="300"/>
 		<mx:HBox horizontalGap="8" id="errorBox" visible="false">
-			<mx:Image source="@Embed('../../../../../../../../assets/icons/error.png')" />
+			<mx:Image source="@Embed('/assets/icons/error.png')" />
 			<mx:Text id="errorText" text="aa" styleName="error" />
 		</mx:HBox>
 	</mx:VBox>

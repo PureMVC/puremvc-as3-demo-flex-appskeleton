@@ -5,10 +5,10 @@
 */
 package org.puremvc.as3.demos.flex.appskeleton
 {
-    import org.puremvc.interfaces.*;
-    import org.puremvc.patterns.proxy.*;
-    import org.puremvc.patterns.facade.*;
-	import org.puremvc.patterns.observer.Notification;
+    import org.puremvc.as3.interfaces.*;
+    import org.puremvc.as3.patterns.proxy.*;
+    import org.puremvc.as3.patterns.facade.*;
+	import org.puremvc.as3.patterns.observer.Notification;
 
     import org.puremvc.as3.demos.flex.appskeleton.view.*;
     import org.puremvc.as3.demos.flex.appskeleton.model.*;
@@ -33,8 +33,8 @@ package org.puremvc.as3.demos.flex.appskeleton
     {
         // Notification name constants
 		// application
-        public static const APP_STARTUP:String 				= "appStartup";
-        public static const APP_SHUTDOWN:String 			= "appShutdown";
+        public static const STARTUP:String 					= "startup";
+        public static const SHUTDOWN:String 				= "shutdown";
 
 		
 		// proxy
@@ -53,14 +53,6 @@ package org.puremvc.as3.demos.flex.appskeleton
 		// common messages
 		public static const ERROR_LOAD_FILE:String			= "Could Not Load the File!";
 		
-		/**
-		 * Start the application
-		 */
-		public function startup( app:Object ):void
-		{
-			notifyObservers ( new Notification( APP_STARTUP,app ) );
-		}
-		
         /**
          * Singleton ApplicationFacade Factory Method
          */
@@ -76,7 +68,7 @@ package org.puremvc.as3.demos.flex.appskeleton
         override protected function initializeController( ) : void 
         {
             super.initializeController(); 
-            registerCommand( APP_STARTUP, org.puremvc.as3.demos.flex.appskeleton.controller.ApplicationStartupCommand );
+            registerCommand( STARTUP, ApplicationStartupCommand );
         }
 		
 		/**
@@ -94,5 +86,14 @@ package org.puremvc.as3.demos.flex.appskeleton
 		{
 			return LocaleProxy( ApplicationFacade.getInstance().retrieveProxy( LocaleProxy.NAME ) );
 		}
+		
+		/**
+		 * Start the application
+		 */
+		public function startup( app:AppSkeleton ):void
+		{
+			sendNotification( STARTUP, app );
+		}
+		
     }
 }

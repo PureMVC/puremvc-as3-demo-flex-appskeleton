@@ -5,13 +5,12 @@
 */
 package org.puremvc.as3.demos.flex.appskeleton.controller
 {
-    import org.puremvc.interfaces.*;
-    import org.puremvc.patterns.command.*;
-    import org.puremvc.patterns.observer.*;
-    
     import org.puremvc.as3.demos.flex.appskeleton.*;
     import org.puremvc.as3.demos.flex.appskeleton.model.*;
     import org.puremvc.as3.demos.flex.appskeleton.view.ApplicationMediator;
+    import org.puremvc.as3.interfaces.*;
+    import org.puremvc.as3.patterns.command.*;
+    import org.puremvc.as3.patterns.observer.*;
     
     /**
      * Prepare the View for use.
@@ -29,7 +28,7 @@ package org.puremvc.as3.demos.flex.appskeleton.controller
         override public function execute( note:INotification ) :void    
 		{
             // Register the ApplicationMediator
-            facade.registerMediator( new ApplicationMediator( note.getBody() ) );
+            facade.registerMediator( new ApplicationMediator( note.getBody() as AppSkeleton ) );
 			
 			// send the notification for show the Splash Screen
 			sendNotification( ApplicationFacade.VIEW_SPLASH_SCREEN );

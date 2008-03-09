@@ -7,12 +7,12 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 {
 	import mx.rpc.IResponder;
 
-	import org.puremvc.interfaces.*;
-    import org.puremvc.patterns.proxy.Proxy;
+	import org.puremvc.as3.interfaces.*;
+    import org.puremvc.as3.patterns.proxy.Proxy;
 	
 	import org.puremvc.as3.demos.flex.appskeleton.*;
-	import org.puremvc.as3.demos.flex.appskeleton.model.business.LoadXMLDelegate;
-	import org.puremvc.as3.demos.flex.appskeleton.model.helpers.XmlResource;
+	import org.puremvc.as3.demos.flex.appskeleton.model.business.*;
+	import org.puremvc.as3.demos.flex.appskeleton.model.helpers.*;
 
     /**
      * A proxy for read the resource file
@@ -20,17 +20,14 @@ package org.puremvc.as3.demos.flex.appskeleton.model
     public class LocaleProxy extends Proxy implements IProxy, IResponder
     {
 		public static const NAME:String = "LocaleProxy";
-		// error message
+
 		public var errorStatus:String;
-		// StartupMonitorProxy
-		private var startupMonitorProxy:StartupMonitorProxy ;
-		
 		public function LocaleProxy ( data:Object = null ) 
         {
             super ( NAME, data );
 			
-			// retrieve the StartupMonitorProxy
-			this.startupMonitorProxy = facade.retrieveProxy( StartupMonitorProxy.NAME ) as StartupMonitorProxy;
+			startupMonitorProxy = facade.retrieveProxy( StartupMonitorProxy.NAME ) as StartupMonitorProxy;
+
 			// add the resource to load
 			this.startupMonitorProxy.addResource( LocaleProxy.NAME );
         }
@@ -38,7 +35,7 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 		public function load():void
 		{
 			var configProxy:ConfigProxy = facade.retrieveProxy( ConfigProxy.NAME ) as ConfigProxy;
-			var url:String = configProxy.getValue('language')+'.xml';
+			var url:String = "assets/"+configProxy.getValue('language')+'.xml';
 			this.data = new Object();
 			// create a worker who will go get some data
 			// pass it a reference to this proxy so the delegate knows where to return the data
@@ -76,5 +73,8 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 		{
 			return data[key.toLowerCase()];
 		}
+
+		private var startupMonitorProxy:StartupMonitorProxy ;
+		
 	}
 }

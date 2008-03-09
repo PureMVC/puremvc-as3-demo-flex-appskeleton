@@ -6,12 +6,12 @@
 package org.puremvc.as3.demos.flex.appskeleton.view
 {
 	import flash.events.Event;
-    import org.puremvc.interfaces.*;
-	import org.puremvc.patterns.mediator.Mediator;
-
+	
+	import org.puremvc.as3.demos.flex.appskeleton.ApplicationFacade;
 	import org.puremvc.as3.demos.flex.appskeleton.model.*;
 	import org.puremvc.as3.demos.flex.appskeleton.view.components.*;
-    import org.puremvc.as3.demos.flex.appskeleton.ApplicationFacade;
+	import org.puremvc.as3.interfaces.*;
+	import org.puremvc.as3.patterns.mediator.Mediator;
 
     /**
      * A Mediator for interacting with the EmployeeLogin component.
@@ -24,29 +24,13 @@ package org.puremvc.as3.demos.flex.appskeleton.view
         /**
          * Constructor. 
          */
-        public function SplashScreenMediator( viewComponent:Object ) 
+        public function SplashScreenMediator( viewComponent:SplashScreen ) 
         {
             // pass the viewComponent to the superclass where 
             // it will be stored in the inherited viewComponent property
-            super( viewComponent );
+            super( NAME, viewComponent );
 			
 			splashScreen.addEventListener(SplashScreen.EFFECT_END, this.endEffect);
-        }
-
-        /**
-         * Get the Mediator name
-         * <P>
-         * Called by the framework to get the name of this
-         * mediator. If there is only one instance, we may
-         * define it in a constant and return it here. If
-         * there are multiple instances, this method must
-         * return the unique name of this instance.</P>
-         * 
-         * @return String the Mediator name
-         */
-        override public function getMediatorName():String
-        {
-            return SplashScreenMediator.NAME;
         }
 
         /**

@@ -7,8 +7,8 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 {
 	import mx.rpc.IResponder;
 
-	import org.puremvc.interfaces.*;
-    import org.puremvc.patterns.proxy.Proxy;
+	import org.puremvc.as3.interfaces.*;
+    import org.puremvc.as3.patterns.proxy.Proxy;
 	
 	import org.puremvc.as3.demos.flex.appskeleton.*;
 	import org.puremvc.as3.demos.flex.appskeleton.model.business.LoadXMLDelegate;
@@ -20,17 +20,15 @@ package org.puremvc.as3.demos.flex.appskeleton.model
     public class ConfigProxy extends Proxy implements IProxy, IResponder
     {
 		public static const NAME:String = "ConfigProxy";
-		// StartupMonitorProxy
-		private var startupMonitorProxy:StartupMonitorProxy ;
-		
+
 		public function ConfigProxy ( data:Object = null ) 
         {
             super ( NAME, data );
 			
 			// retrieve the StartupMonitorProxy
-			this.startupMonitorProxy = facade.retrieveProxy( StartupMonitorProxy.NAME ) as StartupMonitorProxy;
+			startupMonitorProxy = facade.retrieveProxy( StartupMonitorProxy.NAME ) as StartupMonitorProxy;
 			// add the resource to load
-			this.startupMonitorProxy.addResource( ConfigProxy.NAME, true );
+			startupMonitorProxy.addResource( ConfigProxy.NAME, true );
         }
 		
 		public function load():void
@@ -39,7 +37,7 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 			this.data = new Object();
 			// create a worker who will go get some data
 			// pass it a reference to this proxy so the delegate knows where to return the data
-			var delegate : LoadXMLDelegate = new LoadXMLDelegate(this, 'config.xml');
+			var delegate : LoadXMLDelegate = new LoadXMLDelegate(this, 'assets/config.xml');
 			// make the delegate do some work
 			delegate.load();
 		}
@@ -71,5 +69,8 @@ package org.puremvc.as3.demos.flex.appskeleton.model
 		{
 			return data[key.toLowerCase()];
 		}
+
+		private var startupMonitorProxy:StartupMonitorProxy ;
+		
 	}
 }

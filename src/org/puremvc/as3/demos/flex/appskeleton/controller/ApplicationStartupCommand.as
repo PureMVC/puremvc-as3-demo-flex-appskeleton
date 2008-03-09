@@ -5,8 +5,8 @@
 */
 package org.puremvc.as3.demos.flex.appskeleton.controller
 {
-    import org.puremvc.patterns.command.*;
-    import org.puremvc.interfaces.*;
+    import org.puremvc.as3.interfaces.*;
+    import org.puremvc.as3.patterns.command.*;
 
     /**
      * A MacroCommand executed when the application starts.
@@ -41,8 +41,8 @@ package org.puremvc.as3.demos.flex.appskeleton.controller
          */
         override protected function initializeMacroCommand() :void
         {
-            addSubCommand( org.puremvc.as3.demos.flex.appskeleton.controller.ModelPrepCommand );
-            addSubCommand( org.puremvc.as3.demos.flex.appskeleton.controller.ViewPrepCommand );
+            addSubCommand( ModelPrepCommand );
+            addSubCommand( ViewPrepCommand );
         }
     }
 }
