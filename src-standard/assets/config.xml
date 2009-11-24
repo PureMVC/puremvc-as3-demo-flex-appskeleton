@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ PureMVC AS3 Demo - Flex Application Skeleton 
+ Copyright (c) 2007 Daniele Ugoletti <daniele.ugoletti@puremvc.org>
+ Your reuse is governed by the Creative Commons Attribution 3.0 License
+-->
+<config>
+	<param name="language" value="en" />
+	<param name="keyName" value="value 1" />
+	<param name="otherKeyName"><![CDATA[Long text value]]></param>
+	<group name="groupName">
+		<param name="keyNameInsideGroup" value="value 2" />
+		<group name="subGroupName">
+			<param name="keyNameInsideSubGroup" value="value 3" />
+		</group>
+	</group>
+</config>

@@ -1,0 +1,27 @@
+/*
+ PureMVC AS3 Demo - Flex Application Skeleton 
+ Copyright (c) 2007 Daniele Ugoletti <daniele.ugoletti@puremvc.org>
+ Your reuse is governed by the Creative Commons Attribution 3.0 License
+*/
+
+.global
+{
+    highlightAlphas:        .5, .25;
+    borderColor:            #939A9D;
+    headerColors:           #456F84, #9ABBC9;
+    themeColor:             #75B1CE;
+    rollOverColor:          #D6E6EE;
+    selectionColor:         #B8D5E4;
+}
+
+Application
+{
+	backgroundGradientColors: #3E4B8B, #252D52;
+}
+
+.error
+{
+    fontWeight:         "bold";
+    fontSize:           11;
+	color:				#990000;
+}

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ PureMVC AS3 Demo - Flex Application Skeleton 
+ Copyright (c) 2007 Daniele Ugoletti <daniele.ugoletti@puremvc.org>
+ Your reuse is governed by the Creative Commons Attribution 3.0 License
+-->
+<locale>
+	<item name="Hello world" value="Hello world!" />
+	<item name="How to read config values" value="How to read config values" />
+	<item name="How to read locale text" value="How to read locale text" />
+	<item name="Long text"><![CDATA[Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam urna urna, dignissim ut, sodales ut, tristique vel, lectus. Mauris nisl. Donec et nisi sed nisl tincidunt commodo.<br><b>Donec id eros. Lorem ipsum dolor sit amet,</b> consectetuer adipiscing elit. Vestibulum cursus neque eget purus bibendum lobortis. Pellentesque ullamcorper leo id dolor. Cras vel nibh eget lacus egestas suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Suspendisse dictum fermentum felis. Vivamus lacinia. Sed quis leo sed nisi interdum feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Fusce felis arcu, laoreet ut, sodales nec, vestibulum id, tellus.]]></item>
+</locale>
